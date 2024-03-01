@@ -1,0 +1,1498 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <title>Gerardo Poblano Hernandez</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+        />
+        <style>
+            /********************************************
+            * 	reset from
+            * 	http://meyerweb.com/eric/tools/css/reset/
+            *******************************************/
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed,
+            figure, figcaption, footer, header, hgroup,
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+            
+            article, aside, details, figcaption, figure,
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            
+            body {
+                line-height: 1;
+            }
+            
+            ol, ul {
+                list-style: none;
+            }
+            
+            blockquote, q {
+                quotes: none;
+            }
+            
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+                content: none;
+            }
+            
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            /****************
+            *	COMMONS
+            ****************/
+            body, html {
+                font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                font-size: 13px;
+                color: #40484f;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: 1.46153846;
+                text-align: left;
+                webkit-text-size-adjust: 100%;
+            }
+            
+            p {
+                display: block;
+                margin-bottom: 1.3em;
+            }
+            
+            a {
+                color: #0095ff;
+                text-decoration: none;
+            }
+            
+            a:hover {
+                color: #0c65a5;
+                text-decoration: underline;
+            }
+            
+            ul {
+                margin-top: 1rem;
+            }
+            
+            li {
+                list-style-type: square;
+                list-style-position: outside;
+                margin-left: 1.3em;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.67rem;
+            }
+            
+            h3 {
+                font-size: 1.27rem;
+            }
+            
+            em {
+                color: #757575;
+            }
+            
+            blockquote {
+                margin-bottom: 1em;
+            }
+            
+            strong {
+                font-weight: 700;
+            }
+            
+            /* main container */
+            #resume {
+                padding: 1rem;
+                margin-top: 2rem;
+            }
+            
+            /* every section wrapper */
+            .section {
+                margin-bottom: 1rem;
+            }
+            
+            section .location {
+                margin-right: .5em;
+                color: #606d76;
+                font-weight: 700;
+            }
+            
+            #contact {
+                margin-top: .5rem;
+            }
+            
+            #profiles .item {
+                padding: 0;
+            }
+            
+            #header > #profiles,
+            #header > #contact,
+            #skills,
+            #languages,
+            #interests {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-flow: row wrap;
+                flex-flow: row wrap;
+                -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+            }
+            
+            #header > div {
+                line-height: 1.5;
+            }
+            
+            #header > div > div {
+                margin-right: 1.2em;
+            }
+            
+            #header h1.name {
+                font-size: 2.8rem;
+                font-weight: 100;
+                line-height: 100%;
+            }
+            
+            #header h2.label {
+                color: #202931;
+                font-size: 1.47rem;
+                font-weight: 300;
+            }
+            
+            #header .picture {
+                width: 11em;
+                float: right;
+                border-radius: 4px;
+            }
+            
+            .main-summary {
+                background: #f1f8ff;
+                padding: 1.2em 1em;
+                margin-top: 1rem;
+            }
+            
+            .main-summary p {
+                margin: .15em 0 0;
+            }
+            
+            h2.section-title {
+                display: inline-block;
+                background: #fff;
+                padding: 0 1em 0.3em 0;
+                color: #ff6d1f;
+                text-transform: uppercase;
+                font-weight: 600;
+                border: none;
+                font-size: .9rem;
+            }
+            
+            .section > header {
+                position: relative;
+            }
+            
+            .fa {
+                margin-right: 0.25em;
+            }
+            
+            .section > header::after {
+                position: absolute;
+                left: 0;
+                top: .7em;
+                height: 1px;
+                background: #ccc;
+                content: "";
+                width: 100%;
+                z-index: -100;
+                display: block;
+            }
+            
+            .section.main-summary > section {
+                margin: 0;
+            }
+            
+            .section > section > header {
+                font-size: 1.38rem;
+                position: relative;
+                margin-top: .7em;
+            }
+            
+            .section > section > header:first-of-type {
+                margin: 0;
+            }
+            
+            .section > section > header .space-left {
+                position: absolute;
+                left: -1.56rem;
+                top: 5px;
+                color: #aaa;
+                line-height: 1;
+                opacity: 0;
+            }
+            
+            .position,
+            .company,
+            .organization,
+            .institution,
+            .date,
+            .area,
+            .studyType,
+            .title,
+            .awarder {
+                display: inline-block;
+            }
+            
+            .position,
+            .studyType,
+            .area,
+            .title,
+            .language,
+            .name {
+                font-weight: 600;
+            }
+            
+            .company::before,
+            .institution::before,
+            .organization::before,
+            .awarder::before {
+                content: "at "
+            }
+            
+            .company,
+            .institution,
+            .organization,
+            .awarder {
+                color: #606d76;
+                font-weight: 400;
+            }
+            
+            .section header .date {
+                font-size: 1rem;
+                display: block;
+                padding: .1em 0;
+                font-weight: 600;
+            }
+            
+            ul.keywords,
+            ul.courses {
+                margin-top: .5em;
+            }
+            
+            ul.keywords li,
+            ul.courses li {
+                display: inline-block;
+                margin: 2px 2px 2px 0;
+                padding: 4px 5px 5px;
+                font-size: .9rem;
+                line-height: 1;
+                text-transform: lowercase;
+                color: #3e6d8e;
+                background-color: #dfeaf1;
+                border: 0 solid #dfeaf1;
+                white-space: nowrap;
+            }
+            
+            ul.keywords li:hover,
+            ul.courses li:hover {
+                background: #dfeaf0;
+            }
+            
+            .item {
+                padding: .5em 0;
+            }
+            
+            .gpa {
+                padding-bottom: .5em;
+            }
+            
+            .fa.social {
+                font-size: 1.1em;
+            }
+            
+            /* Social Media Brand Colors */
+            .google-plus {
+                color: #dd4b39;
+            }
+            
+            .tumblr {
+                color: #32506d;
+            }
+            
+            .foursquare {
+                color: #0072b1;
+            }
+            
+            .facebook {
+                color: #3b5998;
+            }
+            
+            .linkedin {
+                color: #007bb6;
+            }
+            
+            .pinterest {
+                color: #cb2027;
+            }
+            
+            .dribbble {
+                color: #ea4c89;
+            }
+            
+            .instagram {
+                color: #517fa4;
+            }
+            
+            .twitter {
+                color: #00aced;
+            }
+            
+            .soundcloud {
+                color: #ff3a00;
+            }
+            
+            .wordpress {
+                color: #21759b;
+            }
+            
+            .youtube {
+                color: #bb0000;
+            }
+            
+            .github {
+                color: #171515;
+            }
+            
+            .stack-overflow {
+                color: #828386;
+                position: relative;
+            }
+            
+            .flickr {
+                color: #ff0084;
+            }
+            
+            .stack-overflow::after {
+                position: absolute;
+                left: 0;
+                content: '\f16c';
+                color: #f68a1f;
+                overflow: hidden;
+                height: 40%;
+            }
+            
+            #languages .item,
+            #skills .item,
+            #interests .item {
+                width: 15em;
+                padding: 0 .5em .5em 0;
+                border-bottom: none;
+            }
+            
+            #skills .item {
+                width: 16em;
+            }
+            
+            #skills .item .keywords {
+                width: 15em;
+            }
+            
+            /* Skill chart */
+            .level {
+                margin-bottom: .5em;
+            }
+            
+            .level .bar {
+                border: 1px solid #ddd;
+                display: block;
+                width: 10em;
+                height: 5px;
+                position: relative;
+            }
+            
+            .level .bar::after {
+                position: absolute;
+                content: " ";
+                top: 0;
+                left: 0;
+                background: black;
+                height: 5px;
+            }
+            
+            .level.beginner .bar::after {
+                background: #EB5F51;
+                width: 2.5em;
+            }
+            
+            .level.intermediate .bar::after {
+                background: #ffdf1f;
+                width: 5em;
+            }
+            
+            .level.advanced .bar::after,
+            .level.fluent .bar::after {
+                background: #5CB85C;
+                width: 7.5em;
+            }
+            
+            .level.master .bar::after,
+            .level.native.speaker .bar::after {
+                background: #59C596;
+                width: 10em;
+            }
+            
+            #references .item {
+                padding-left: .5em;
+                border-left: 5px solid #ff6d1f;
+            }
+            
+            /******************
+            *	HELPER CLASSES
+            ******************/
+            
+            .clear::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            
+            .display {
+                display: block;
+                opacity: 1 !important;
+            }
+            
+            .margin1 {
+                margin-bottom: .5rem;
+            }
+            
+            /****************
+            *		TABLET
+            ****************/
+            @media screen and (min-width: 602px) {
+                #resume {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+            
+            /****************
+            *		LAPTOP
+            ****************/
+            @media screen and (min-width: 1025px) {
+                li {
+                    margin-left: 1.5em;
+                }
+            
+                #resume {
+                    width: 820px;
+                    margin: 2rem auto;
+                    opacity: 0;
+                    -webkit-transition: opacity .5s ease-in-out;
+                    transition: opacity .5s ease-in-out;
+                }
+            
+                .section > section > header .space-left {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            
+                .section > section {
+                    margin-left: 1.67rem;
+                }
+            
+                .company::before,
+                .institution::before,
+                .organization::before,
+                .awarder::before {
+                    content: "| ";
+                }
+            
+                .header-left {
+                    float: left;
+                    width: 70%;
+                    word-break: normal;
+                }
+            
+                .section header .date {
+                    float: right;
+                    padding: .2em;
+                }
+            
+                .display {
+                    display: none;
+                }
+            
+                .display:not(.none) {
+                    display: block;
+                }
+            
+            }
+            
+            @media print {
+            
+                #resume {
+                    margin: 0;
+                    padding: 0;
+                    -ms-word-wrap: break-word;
+                    word-wrap: break-word;
+                    line-height: 1.3;
+                    /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
+                }
+            
+                @page {
+                    margin: 1cm 1.4cm;
+                }
+            
+                .item-count {
+                    display: none;
+                }
+            
+                .company::before,
+                .institution::before,
+                .organization::before,
+                .awarder::before {
+                    content: "at ";
+                }
+            
+                .main-summary {
+                    padding: 2rem 0;
+                }
+            
+                .section {
+                    margin: .8rem 0;
+                    padding: 0;
+                }
+            
+                .section header {
+                    padding-bottom: .15rem;
+                }
+            
+                .section .location {
+                    padding-bottom: .15rem;
+                }
+                .stack-overflow::after {
+                    content: "";
+                }
+            
+                .fa.social {
+                    color: #828386;
+                }
+            
+                ul {
+                    margin-top: .4em;
+                }
+            
+                ul, li {
+                    padding: 0;
+                }
+            
+                ul.keywords li,
+                ul.courses li {
+                    margin: 0;
+                    padding: 0;
+                    font-size: .8rem;
+                    text-transform: lowercase;
+                }
+            
+                ul.keywords li::after,
+                ul.courses li::after {
+                    padding: 0 0 0 .1rem;
+                    content: " |";
+                }
+            
+                ul.keywords::before,
+                ul.courses::before {
+                    font-size: .8rem;
+                    font-weight: 600;
+                }
+            
+                ul.keywords::before {
+                    content: "Skills acquired: ";
+                }
+            
+                #skills .keywords::before {
+                    content: '';
+                }
+            
+                .section p {
+                    margin: 0;
+                    padding: 0;
+                }
+            
+                ul.courses::before {
+                    content: "Major courses: ";
+                }
+            
+                ul.keywords li:last-of-type::after,
+                ul.courses li:last-of-type::after {
+                    content: "";
+                }
+            
+                .level em {
+                    font-style: normal;
+                    padding: .1em 0;
+                }
+            
+                .level .bar {
+                    display: none;
+                }
+            
+                #profiles .item {
+                    padding: 0;
+                }
+            
+                .item.display {
+                    display: block;
+                    opacity: 1 !important;
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="resume">
+            <header id="header" class="clear">
+                <img class="picture" src="/home/gerardo/Documentos/HackMyResume/1584739409431.jpg"
+                alt="Gerardo Poblano Hernandez" />
+                <div class="middle">
+                    	<h1 class="name">Gerardo Poblano Hernandez</h1>
+
+                    	<h2 class="label">QA Tester Analyst Senior</h2>
+
+                </div>	<span class="location">
+								<span class="city">
+									Mexico City,
+								</span>
+	<span class="region">
+									Mexico
+								</span>
+	<span class="countryCode">
+									MX
+								</span>
+</span>
+                <div id="contact">
+                    <div class="website"> <span class="fa fa-external-link"></span>
+	<a target="_blank" href="http://www.gophernandez.com">http://www.gophernandez.com</a>
+
+                    </div>
+                    <div class="email"> <span class="fa fa-envelope-o"></span>
+	<a href="mailto:gerardo.poblano@gophernandez.com">gerardo.poblano@gophernandez.com</a>
+
+                    </div>
+                    <div class="phone"> <span class="fa fa-mobile"></span>
+(+52) 55 1688-7306</div>
+                </div>
+                <div id="profiles">
+                    <div class="item">
+                        <div class="username">	<span class="fa fa-twitter twitter social"></span>
+	<span></span>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="username">	<span class="fa fa-linkedin linkedin social"></span>
+	<span class="url">
+										<a href="https://www.linkedin.com/in/gerardopoblano">gerardopoblano</a>
+									</span>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="username">	<span class="fa fa-github github social"></span>
+	<span class="url">
+										<a href="https://gopoblano.github.io">gopoblano</a>
+									</span>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="username">	<span class="fa fa-instagram instagram social"></span>
+	<span></span>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="section main-summary">
+                <section>
+                    <div>
+                        <p>Gerardo stands out as an extremely skilled and highly educated Software
+                            Engineer with over 15 years of experience. His primary focus has been on
+                            Quality Assurance for the past 16 years. As a QA professional, his goal
+                            is to implement the best practices of QA into the internal processes of
+                            software projects by supporting and integrating specialized tools.</p>
+                        <p>Gerardo is constantly striving for improvement in the process, and guides
+                            his work by the philosophy of always having respect for the business objectives
+                            and scope of the organization. A fluent English speaker, Gerardo makes
+                            a strong addition to any international and distributed team. In addition
+                            to his demonstrated excellence as a QA engineer, Gerardo notes his main
+                            strengths lie in testing, scrum, test exploratory, planning, and management.</p>
+                    </div>
+                </section>
+            </section>
+            <section class="section margin1">
+                <header>
+                    	<h2 class='section-title'>Skills</h2>
+
+                </header>
+                <section id="skills">
+                    <div class="item">
+                        	<h3 class="name">
+								Testing Management
+							</h3>
+
+                        <div class="level advanced">	<em>Advanced</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>technical skills</li>
+                            <li>leadership</li>
+                            <li>communication</li>
+                            <li>problem solving</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        	<h3 class="name">
+								Functional Testing
+							</h3>
+
+                        <div class="level master">	<em>Master</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>retest</li>
+                            <li>component</li>
+                            <li>bug tracking</li>
+                            <li>regression</li>
+                            <li>e2e</li>
+                            <li>integration</li>
+                            <li>system</li>
+                            <li>prioritization</li>
+                            <li>pairwise</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        	<h3 class="name">
+								Automation Testing
+							</h3>
+
+                        <div class="level intermediate">	<em>Intermediate</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>keyword driven</li>
+                            <li>volume data</li>
+                            <li>data driven</li>
+                            <li>uft</li>
+                            <li>loadrunner</li>
+                            <li>testpartner</li>
+                            <li>vbscript</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        	<h3 class="name">
+								Mobile Testing
+							</h3>
+
+                        <div class="level master">	<em>Master</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>ios</li>
+                            <li>android</li>
+                            <li>tags</li>
+                            <li>emulation</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        	<h3 class="name">
+								Agile Testing
+							</h3>
+
+                        <div class="level master">	<em>Master</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>scrum</li>
+                            <li>api</li>
+                            <li>exploratory session</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        	<h3 class="name">
+								Source Control/ALM
+							</h3>
+
+                        <div class="level advanced">	<em>Advanced</em>
+
+                            <div class="bar"></div>
+                        </div>
+                        <ul class="keywords">
+                            <li>Git</li>
+                            <li>Jira</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        	<h3 class="name">
+								Other
+							</h3>
+
+                        <ul class="keywords">
+                            <li>postman</li>
+                            <li>newman</li>
+                            <li>tmux</li>
+                            <li>terminator</li>
+                            <li>psql</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="section">
+                <header>
+                    	<h2 class='section-title'>Work Experience <span class="item-count">(7)</span></h2>
+
+                </header>
+                <section id="work">
+                    <header>	<span class="space-left">
+											<span class="fa fa-caret-down"></span>
+</span>
+                        <div class="position">QC Tester Analyst Sr</div>
+                        <div class="company">Globant / MX and US Projects</div>
+                        <div class="date">	<span class="startDate">
+											October 2020
+										</span>
+	<span class="endDate">
+											- October 2023
+										</span>
+
+                        </div>
+                    </header> <span class="location">
+                                    <span class="fa fa-map-marker"></span>
+
+                    <span
+                    class="city">Mexico City,</span> <span class="countryCode">
+                                        (MX)
+                                    </span>
+ <span class="region">
+                                      Mexico
+                                    </span>
+</span> <span class="website">
+                                    <a href="https://www.globant.com/es">https://www.globant.com/es</a>
+                                </span>
+
+                        <div class="item display" style="opacity:1">
+                            <div class="summary">
+                                <p>
+                                    <p></p>
+                                </p>
+                            </div>
+                            <ul class="highlights">
+                                <li>Execute the Regression Test Set as part of every delivery cycle of development
+                                    in the sprint.</li>
+                                <li>Report any unexpected result according with guidelines of Test Cases and
+                                    designs as part of the Analysis of Requirements or User Stories at the
+                                    beginnig of each sprint.</li>
+                                <li>Upload to JIRA/XRAY all the testware or documentation as result of QA
+                                    process.</li>
+                                <li>Keep tracking with development team of any insight or outputs of testing
+                                    execution and particularly of issues discovered.</li>
+                                <li>Maintain a baseline of Testing Coverage and Testing perspective during
+                                    the Test Design, Test Analysis, Test Execution according with the different
+                                    goals for each of US defined by business and technical teams.</li>
+                            </ul>
+                        </div>
+                        <header>	<span class="space-left">
+											<span class="fa fa-caret-right"></span>
+</span>
+                            <div class="position">QA Manager / Tester Engineer Senior</div>
+                            <div class="company">Rightsource Business Solutions</div>
+                            <div class="date">	<span class="startDate">
+											February 2019
+										</span>
+	<span class="endDate">
+											- October 2020
+										</span>
+
+                            </div>
+                        </header> <span class="location">
+                                    <span class="fa fa-map-marker"></span>
+
+                        <span
+                        class="city">Mexico City,</span> <span class="countryCode">
+                                        (MX)
+                                    </span>
+ <span class="region">
+                                      Mexico
+                                    </span>
+</span> <span class="website">
+                                    <a href="https://www.rightsource.us/">https://www.rightsource.us/</a>
+                                </span>
+
+                            <div class="item display none"
+                            style="opacity:0">
+                                <div class="summary">
+                                    <p>
+                                        <p>Testing coordinator and Analyst of internals biometrics projects for the
+                                            US Embassy</p>
+                                    </p>
+                                </div>
+                                <ul class="highlights">
+                                    <li>Automation of Testing Regression with Newman tool.</li>
+                                    <li>Coordinate and develop testing strategies for the project and QA department.</li>
+                                    <li>Give support and feedback to the heads of the project about testing activities
+                                        for the in course sprint.</li>
+                                    <li>Managing and couching testing team that have participated into the operation
+                                        of testing activities.</li>
+                                    <li>Plan and lead testing goals for the project according with business requeriments.</li>
+                                    <li>Create and aling a testing process adapting it to the activities of development
+                                        and business goals for the agile strategy.</li>
+                                    <li>Execution of Load and Stress testing of REST microservices.</li>
+                                    <li>Analysis of a testing environment in JMETER tool for planning and execution
+                                        of performance testing.</li>
+                                    <li>Configuration of JMETER tool for automatic reporting as results of testing
+                                        execution of tests suites and scenarios.</li>
+                                    <li>Integration of JMETER tool with InfluxDB and Grafana as part of creating
+                                        a reporting environment in real time for internal reports and performance
+                                        graphs.</li>
+                                    <li>Execution of functional testing to an internal components integrated into
+                                        an internal architecture for biometricals flow in the projects.</li>
+                                    <li>Integration testing each time a new component was integrated inside MULE&#x27;s
+                                        flows as part of the orchestration, validation and comunication between
+                                        them.</li>
+                                    <li>API testing using Postman through new deployed components of internal
+                                        systems.</li>
+                                </ul>
+                            </div>
+                            <header>	<span class="space-left">
+											<span class="fa fa-caret-right"></span>
+</span>
+                                <div class="position">QA Project Manager</div>
+                                <div class="company">Infosys</div>
+                                <div class="date">	<span class="startDate">
+											April 2018
+										</span>
+	<span class="endDate">
+											- November 2018
+										</span>
+
+                                </div>
+                            </header> <span class="location">
+                                    <span class="fa fa-map-marker"></span>
+
+                            <span
+                            class="city">Mexico City,</span> <span class="countryCode">
+                                        (MX)
+                                    </span>
+ <span class="region">
+                                      Mexico
+                                    </span>
+</span> <span class="website">
+                                    <a href="https://www.infosys.com/mx/">https://www.infosys.com/mx/</a>
+                                </span>
+
+                                <div class="item display none"
+                                style="opacity:0">
+                                    <div class="summary">
+                                        <p>
+                                            <p>Coordinate the QA Testing efforts to validate the microservices for the
+                                                internal backend of banking systems.</p>
+                                        </p>
+                                    </div>
+                                    <ul class="highlights">
+                                        <li>Coordinating all the testing and estimation efforts for internal projects
+                                            of API factory (functional and performance).</li>
+                                        <li>Participating in meetings to define the testing approaches of the UAT
+                                            testing.</li>
+                                        <li>Managing financial resources (estimations) for projects in a high level.</li>
+                                        <li>Defining new strategies and support for API projects using SoapUI.</li>
+                                        <li>Coordinating offshore (India) people for API automation activities using
+                                            a framework and an internal tool for it.</li>
+                                        <li>Working in Agile and Waterfall projects.</li>
+                                        <li>Analysis of functional factors (docs, reqs, meetings,etc) in a simple
+                                            manners for calculations of testing estimations to projects.</li>
+                                    </ul>
+                                </div>
+                                <header>	<span class="space-left">
+											<span class="fa fa-caret-right"></span>
+</span>
+                                    <div class="position">QA Specialist</div>
+                                    <div class="company">Schibsted Media Group / Segundamano</div>
+                                    <div class="date">	<span class="startDate">
+											March 2015
+										</span>
+	<span class="endDate">
+											- March 2018
+										</span>
+
+                                    </div>
+                                </header> <span class="location">
+                                    <span class="fa fa-map-marker"></span>
+
+                                <span
+                                class="city">Mexico City,</span> <span class="countryCode">
+                                        (MX)
+                                    </span>
+ <span class="region">
+                                      Mexico
+                                    </span>
+</span> <span class="website">
+                                    <a href="https://www.segundamano.mx/">https://www.segundamano.mx/</a>
+                                </span>
+
+                                    <div class="item display none"
+                                    style="opacity:0">
+                                        <div class="summary">
+                                            <p>
+                                                <p>Sofware Tester Specialist applying testing approaches for back/front end
+                                                    and mobile devices in agile environments.</p>
+                                            </p>
+                                        </div>
+                                        <ul class="highlights">
+                                            <li>Sofware Tester Specialist applying testing approaches for back/front end
+                                                and mobile devices in agile environments.</li>
+                                            <li>I had a complete interaction with all the environments that I needed to
+                                                work with and to test using TMUX tool and Linux terminals</li>
+                                            <li>I was responsible of QA and to control all the differents changes in to
+                                                the code and the QA/Production deploys along of SaltStack orchestration
+                                                tool and GoCD. So, to have a continous delivering and monitoring of all
+                                                the diferents functionalities, refactors in code and fixes in general of
+                                                the Segundamano&#x27;s repositories.</li>
+                                            <li>It was necessary to interact with GoCD moving throught the differents
+                                                pipelines and to had a acontrol to deploy into QA and Production environment
+                                                the new releases or changes in code to be tested throught the pipeline
+                                                defined.</li>
+                                            <li>Regression and Integration Testing for each new change into the code and
+                                                functionalities over three different environments Development (also know
+                                                as regress), QA and Production. Among my main activities was to build or
+                                                deploy into regress and controlled enviroment all the core componentes
+                                                of schisbted&#x27;s platfform and executed all the testing sets planned
+                                                for regression to every new changes and to verify none broken points for
+                                                the back and front end.</li>
+                                            <li>To have a percentage of test coverage automated and its Integration to
+                                                Continuous Delivery pipeline with a CLI tool as Newman.</li>
+                                            <li>I have had also the opportunity to automate with Postman and used it as
+                                                a main resource to test and send all the requests to the different endpoints
+                                                (Backend) of the APIs solution into the Payment&#x27;s models of Segundamano.</li>
+                                            <li>Exploratory Testing as part a regression plan for each new release of
+                                                Segundamano Site.</li>
+                                            <li>Mobile Testing for each version of the app of Segundamano, working with
+                                                emulators as Genymotion and physical devices to test different functionality
+                                                in iOS and Android.</li>
+                                            <li>I was responsible to be part of all mobile testing efforts and also to
+                                                keep tracking of new changes or APK releases into fabric tool to start
+                                                a new exploratory testing session.</li>
+                                            <li>I was responsible to verify the major part of changes in code of specific
+                                                functionalites that were built and integrated correctly in with Jenkins
+                                                tool and the new job triggerred (with tests running on it) on it running
+                                                with the integrated change into the develop branch to be after merged into
+                                                the master for each deploy in production environment.</li>
+                                            <li>To have a control of the way of execute testing into QA/Production was
+                                                necessary to be oriented with a canary strategy, that it only means to
+                                                modify a cookie value into the browser and define a percentage weight to
+                                                have visibility of new functionalities and to test under a controlled environment
+                                                If something goes wrong and easily handle to make a rollback of these.</li>
+                                            <li>As a QA Scrum member I also had to give a like or approved the new changes
+                                                delivered into each pull request of github, according with an analytical
+                                                view, product oriented, best practices and technical perspective with previous
+                                                understanding and making questions to developers of the new change.</li>
+                                            <li>Automate testing using Selenium IDE in combination with a JS library to
+                                                try to use a data driven execution approach during the automation. This
+                                                means to have data variability at the moment of execute the test cases.</li>
+                                            <li>Also as part of my testing activities I had to execute test suites using
+                                                different browser or cross browser testing approaches to have certainty
+                                                of the visualization of the front end.</li>
+                                        </ul>
+                                    </div>
+                                    <header>	<span class="space-left">
+											<span class="fa fa-caret-right"></span>
+</span>
+                                        <div class="position">Tester Analyst Senior</div>
+                                        <div class="company">Banco Walmart / Vantis</div>
+                                        <div class="date">	<span class="startDate">
+											July 2013
+										</span>
+	<span class="endDate">
+											- February 2015
+										</span>
+
+                                        </div>
+                                    </header> <span class="location">
+                                    <span class="fa fa-map-marker"></span>
+
+                                    <span
+                                    class="city">Mexico City,</span> <span class="countryCode">
+                                        (MX)
+                                    </span>
+ <span class="region">
+                                      Mexico
+                                    </span>
+</span> <span class="website">
+                                    <a href="http://www.vantis.mx/">http://www.vantis.mx/</a>
+                                </span>
+
+                                        <div class="item display none"
+                                        style="opacity:0">
+                                            <div class="summary">
+                                                <p>
+                                                    <p>I have participated in all testing activities giving continuity and following
+                                                        the internal process of QA area at Walmart Banking. My main duties were
+                                                        helping the release and deployment of projects according to the schedule
+                                                        and requeriment specifications. In addition, to reach the goals for the
+                                                        projects, I supported the testing lead activities giving new proposals
+                                                        to problem solution and, also including the definition of a plan of QA
+                                                        process as basis of the projects. Overall, I worked as test lead in almost
+                                                        all bank projects under the supervision of the main manager for QA team.</p>
+                                                </p>
+                                            </div>
+                                            <ul class="highlights">
+                                                <li>Test automation using Microfocus-TestPartner (Administration, Debugging,
+                                                    Maintenance and Enforcement)</li>
+                                                <li>Preparation and setting of automated testing using test scripts that are
+                                                    part of internal automation framework.</li>
+                                                <li>Generating of all Testware (Testing Matrix, analysis and review of the
+                                                    requeriment, test evidence, etc..) according to the internal quality process.</li>
+                                                <li>Monitoring, publication and generation of accounting reports for the business
+                                                    area (accounting reports, closing day, accounting balances, etc.) in UNIX
+                                                    environment.</li>
+                                                <li>Preparation of all preconditions and environment data to testing of sending
+                                                    and receiving SPEI.</li>
+                                                <li>Monitoring tests through the use of the authorizer and requests from Profile
+                                                    or Core banking.</li>
+                                                <li>Participation in projects for fraud prevention AFACS (Anti-Fraud and Anti-Corruption
+                                                    Strategy).</li>
+                                                <li>Participation in projects for eBanking.</li>
+                                                <li>Participation in projects of banking processes with time windows with
+                                                    PROSA (Closing sales TX&#x27;s, Sales different stores, etc).</li>
+                                                <li>Participation in partial and complete regressions of different projects.</li>
+                                                <li>Participation in banking processes that deal with orders, accounts of
+                                                    different products (Debit, Payroll, Checking, Savings, Credit), CECOBAN,
+                                                    Clients Individuals and Corporate Entities.</li>
+                                            </ul>
+                                        </div>
+                                        <header>	<span class="space-left">
+											<span class="fa fa-caret-right"></span>
+</span>
+                                            <div class="position">Tester Analyst</div>
+                                            <div class="company">Banamex / Nasoft / Adecco</div>
+                                            <div class="date">	<span class="startDate">
+											August 2012
+										</span>
+	<span class="endDate">
+											- June 2013
+										</span>
+
+                                            </div>
+                                        </header> <span class="location">
+                                    <span class="fa fa-map-marker"></span>
+
+                                        <span
+                                        class="city">Mexico City,</span> <span class="countryCode">
+                                        (MX)
+                                    </span>
+ <span class="region">
+                                      Mexico
+                                    </span>
+</span> <span class="website">
+                                    <a href="https://www.adecco.com.mx/">https://www.adecco.com.mx/</a>
+                                </span>
+
+                                            <div class="item display none"
+                                            style="opacity:0">
+                                                <div class="summary">
+                                                    <p>
+                                                        <p>I have participated in the ECS+ project of telemarketing area of Banamex.
+                                                            My main duties were the technical support of the correct execution of the
+                                                            whole process of testing and the generation of artefacts as a result of
+                                                            the execution.</p>
+                                                    </p>
+                                                </div>
+                                                <ul class="highlights">
+                                                    <li>Execution of test scripts in different applications of UAT environment.</li>
+                                                    <li>Analysis and planning the correct strategy to use during execution, thus
+                                                        defining the preconditions and inputs to perform tests.</li>
+                                                    <li>Provide adequate information for the proper tracking of ITO and Infrastructure
+                                                        team to test each of the defects found during execution.</li>
+                                                    <li>Registering activities of test execution using HP Quality Center for the
+                                                        testing process implementation and management it.</li>
+                                                    <li>Analysis, review and generation of documentation for business area and
+                                                        give it some support in the early stages of testing process.</li>
+                                                    <li>Support for the generation of metrics and the concentration for measuring
+                                                        progress in executions.</li>
+                                                </ul>
+                                            </div>
+                                            <header>	<span class="space-left">
+											<span class="fa fa-caret-right"></span>
+</span>
+                                                <div class="position">Automated Tester Analyst</div>
+                                                <div class="company">Banco Walmart / Vantis</div>
+                                                <div class="date">	<span class="startDate">
+											December 2011
+										</span>
+	<span class="endDate">
+											- August 2012
+										</span>
+
+                                                </div>
+                                            </header> <span class="location">
+                                    <span class="fa fa-map-marker"></span>
+
+                                            <span
+                                            class="city">Mexico City,</span> <span class="countryCode">
+                                        (MX)
+                                    </span>
+ <span class="region">
+                                      Mexico
+                                    </span>
+</span> <span class="website">
+                                    <a href="http://www.vantis.mx/">http://www.vantis.mx/</a>
+                                </span>
+
+                                                <div class="item display none"
+                                                style="opacity:0">
+                                                    <div class="summary">
+                                                        <p>
+                                                            <p>During this project my activities were focused on supporting, monitoring
+                                                                and execution of automated functional testing for Crediformato Project.Focusing
+                                                                in the development of test scripts with Microfocus Test Partner tool.</p>
+                                                        </p>
+                                                    </div>
+                                                    <ul class="highlights">
+                                                        <li>Automation of business processes of Busqueda de Personas Físicas, Compras
+                                                            Crediformato and a utility program that randomizes the data to use in generating
+                                                            the INSERT in the tables that are occupied by the scripts.</li>
+                                                        <li>Development of utility test scripts for generating data as input for other
+                                                            processes.</li>
+                                                        <li>Adapting and updating the code of test scripts to specific needs according
+                                                            to business requirement requested.</li>
+                                                        <li>Preparing the environment or data pool used in the tests and test scripts,
+                                                            functional preconditions and business rules before implementation to re-test
+                                                            and regression-test</li>
+                                                        <li>Execution of all functional tests proposed in regression matrix and evaluation
+                                                            of PDTELLER and WEBCSR systems, after the changes and / or maintenance.</li>
+                                                    </ul>
+                                                </div>
+                </section>
+            </section>
+            <section class="section">
+                <header>
+                    	<h2 class='section-title'>Education <span class="item-count">(3)</span></h2>
+
+                </header>
+                <section id="education">
+                    <header class="clear">	<span class="space-left">
+										<span class="fa fa-caret-down"></span>
+</span>
+                        <div class="header-left">
+                            <div class="area">Certification Testing</div>
+                            <div class="institution">iSQI CMAP Mobile Tester</div>
+                        </div>
+                        <div class="date">	<span class="startDate">
+										2016
+									</span>
+	<span class="endDate">
+										- 2016
+									</span>
+
+                        </div>
+                    </header>
+                    <ul class="courses">
+                        <li>Testing IT - iSQI Certification course</li>
+                    </ul>
+                    <div class="item display" style="opacity:1"></div>
+                    <header class="clear">	<span class="space-left">
+										<span class="fa fa-caret-right"></span>
+</span>
+                        <div class="header-left">
+                            <div class="studyType">Certification</div>
+                            <div class="area">Testing</div>
+                            <div class="institution">ISTQB Foundations Level</div>
+                        </div>
+                        <div class="date">	<span class="startDate">
+										2011
+									</span>
+	<span class="endDate">
+										- 2011
+									</span>
+
+                        </div>
+                    </header>
+                    <div class="item display none" style="opacity:0"></div>
+                    <header class="clear">	<span class="space-left">
+										<span class="fa fa-caret-right"></span>
+</span>
+                        <div class="header-left">
+                            <div class="studyType">Bachelor</div>
+                            <div class="area">Computer Engineer</div>
+                            <div class="institution">UNAM Mexico, FES Aragon</div>
+                        </div>
+                        <div class="date">	<span class="startDate">
+										2000
+									</span>
+	<span class="endDate">
+										- 2005
+									</span>
+
+                        </div>
+                    </header>
+                    <ul class="courses">
+                        <li>CAR04 - UNIX SYSTEM ADMINISTRATOR</li>
+                    </ul>
+                    <div class="item display none" style="opacity:0">
+                        <div class='gpa'>	<strong> Grade:</strong>  <span>9.3</span>
+
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="section margin1">
+                <header>
+                    	<h2 class='section-title'>Languages</h2>
+
+                </header>
+                <section id="languages">
+                    <div class="display">
+                        	<h3 class="language">
+											Spanish
+										</h3>
+
+                        <div class="item">
+                            <div class="level fluency native speaker">	<em>Native speaker</em>
+
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="display">
+                        	<h3 class="language">
+											English
+										</h3>
+
+                        <div class="item">
+                            <div class="level fluency intermediate advanced speaker">	<em>Intermediate Advanced Speaker</em>
+
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="section margin1">
+                <header>
+                    	<h2 class='section-title' class='section-title'>Interests</h2>
+
+                </header>
+                <section id="interests">
+                    <div class="item">
+                        	<h3 class="name">
+										Computer Science
+									</h3>
+
+                        <ul class="keywords">
+                            <li>QA</li>
+                            <li>Testing</li>
+                            <li>Engineering</li>
+                            <li>Researching</li>
+                            <li>Development</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        	<h3 class="name">
+										Gaming
+									</h3>
+
+                        <ul class="keywords">
+                            <li>Playstation</li>
+                            <li>Nintendo</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        	<h3 class="name">
+										Sports
+									</h3>
+
+                        <ul class="keywords">
+                            <li>Soccer</li>
+                            <li>World Cup</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <script>
+            (function(){
+            				var elements = document.querySelector("#resume");
+            
+            				// adding the element to the all container
+            				// and using event delegation
+            				elements.addEventListener("click", function(e) {
+            					var current = e.target;
+            					// font awesone arrows
+            					var arrowRight = current.classList.contains('fa-caret-right');
+            					var arrowDown = current.classList.contains('fa-caret-down');
+            
+            					if(current && current.nodeName == "SPAN" && (arrowRight || arrowDown)) {
+            						var header = e.target.parentNode.parentNode;
+            						var item = header.nextSibling;
+            
+            						// select the .item element from the siblings
+            						while (!item || !item.classList || !item.classList.contains('item')) {
+            							item = item.nextSibling;
+            						}
+            
+            						// hide or show the .item element
+            						item.classList.toggle('none');
+            
+            						// if the .item is going to be shown then imcrease is opacity
+            						// every 20 milliseconds to make a fadeIn effect
+            						if (!item.classList.contains('none')) {
+            							var id = setInterval(function() {
+            								item.style.opacity = parseFloat(item.style.opacity) + 0.09;
+            								if (parseFloat(item.style.opacity) >= 1) {
+            									clearInterval(id);
+            								}
+            							}, 20);
+            						} else {
+            							item.style.opacity = 0;
+            						}
+            
+            						current.classList.toggle('fa-caret-right');
+            						current.classList.toggle('fa-caret-down');
+            					}
+            
+            				}, false);
+            
+            				// Make the #resume visible only when the DOM is fully loaded
+            				elements.style.opacity = '1';
+            			})();
+        </script>
+    </body>
+
+</html>
