@@ -693,6 +693,10 @@
 								</span>
 </span>
                 <div id="contact">
+                    <div class="website"> <span class="fa fa-external-link"></span>
+	<a target="_blank" href="https://bit.ly/4lv1dNH">https://bit.ly/4lv1dNH</a>
+
+                    </div>
                     <div class="email"> <span class="fa fa-envelope-o"></span>
 	<a href="mailto:jobs@gophernandez.com">jobs@gophernandez.com</a>
 
@@ -717,7 +721,9 @@
                     </div>
                     <div class="item">
                         <div class="username">	<span class="fa fa-github github social"></span>
-	<span></span>
+	<span class="url">
+										<a href="https://gopoblano.github.io">gopoblano</a>
+									</span>
 
                         </div>
                     </div>
